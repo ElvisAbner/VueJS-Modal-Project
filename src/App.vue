@@ -11,7 +11,7 @@
     <p>{{ text }}</p>
   </Modal>
   </div>
-  <button @click="toggleShowModals">Show modal</button>
+  <button @click="toggleShowModals" class="btn-modal1">Show modal</button>
 </template>
 
 <script>
@@ -51,5 +51,24 @@ h1 {
   border-bottom: 1px solid #ddd;
   display: inline-block;
   padding-bottom: 10px;
+}
+  .btn-modal1 {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid #ff0a78;
+  background: #ff0a78;
+}
+.btn-modal1:hover {
+  background: #fff;
+  color: #ff0a78
 }
 </style>
