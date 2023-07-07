@@ -57,11 +57,6 @@
     margin: 10px;
   }
 
-  .modal .actions a:hover {
-    background-color: white;
-    color: red;
-  }
-
   /* sale styles */
   .modal.sale {
     background: crimson;
