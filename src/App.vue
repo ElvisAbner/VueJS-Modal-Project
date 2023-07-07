@@ -1,17 +1,36 @@
 <template>
   <h1>{{ title }}</h1>
   <p>Welcome</p>
+
   <div v-if="showModal">
   <Modal theme="sale" @close="toggleShowModals">
+
     <template v-slot:links>
       <a href="#">Sign up now</a>
       <a href="#">More info</a>
     </template>
+    
     <h1>{{ header }}</h1>
     <p>{{ text }}</p>
+  
   </Modal>
   </div>
+
+  <div v-if="showModal2" @close2nd="toggleShowModals2">
+    <Modal theme="sale">
+      <template v-slot="linksGame">
+        <a href="#">Play Online Now!</a>
+        <a href="#">Download!</a>
+      </template>
+
+        <h1> {{ header2nd }} </h1>
+        <p> {{ text2nd }} </p>
+
+    </Modal>
+  
   <button @click="toggleShowModals">Show modal</button>
+  <button @click="toggleShowModals2">Show modal 2</button>
+
 </template>
 
 <script>
@@ -25,13 +44,19 @@ export default {
       title: 'My first Vue App :)',
       header: 'Sign up for the Giveaway!',
       text: 'Grab your ninja swag for half price!',
-      showModal: false   
+      header2nd: 'One Piece',
+      text2nd: 'This is the best anime ever!!!',
+      showModal: false,
+      showModal2: false
     }
   },
   methods: {
     toggleShowModals() {
       this.showModal = !this.showModal
-    }
+    },
+    toggleShowModals2() {
+      this.showModal2 = !this.showModal2
+      }
   }
 
 }

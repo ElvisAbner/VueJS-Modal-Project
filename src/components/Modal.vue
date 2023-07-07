@@ -7,6 +7,17 @@
       </div>
     </div>
   </div>
+
+  <div class="backdrop" @click.self"closeModal2">
+    <div class="modal">
+
+    <slot> </slot>
+
+    <slot name="linksGame"></slot>
+
+      
+    </div>
+  </div>
 </template>
 
 <script>
@@ -15,7 +26,10 @@
     methods: {
       closeModal() {
         this.$emit('close')
-      }
+      },
+      closeModal2() {
+        this.$emit('close2nd')
+        }
     }
   }
 </script>
