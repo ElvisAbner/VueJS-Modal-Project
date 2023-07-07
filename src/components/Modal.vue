@@ -8,13 +8,8 @@
     </div>
   </div>
 
-  <div class="backdrop" @click.self"closeModal2">
+  <div class="backdrop" @click.self"closeModalTwo">
     <div class="modal">
-
-    <slot> </slot>
-
-    <slot name="linksGame"></slot>
-
       
     </div>
   </div>
@@ -27,7 +22,7 @@
       closeModal() {
         this.$emit('close')
       },
-      closeModal2() {
+      closeModalTwo() {
         this.$emit('close2nd')
         }
     }

@@ -16,17 +16,12 @@
   </Modal>
   </div>
 
-  <div v-if="showModal2" @close2nd="toggleShowModals2">
-    <Modal theme="sale">
-      <template v-slot="linksGame">
-        <a href="#">Play Online Now!</a>
-        <a href="#">Download!</a>
-      </template>
-
-        <h1> {{ header2nd }} </h1>
-        <p> {{ text2nd }} </p>
-
+  <div v-if="showModalTwo">
+    <Modal @close="toggleShowModalsTwo">
+      <h1>Sign up to the Newsletter</h1>
+      <p>For updates and promo codes!</p>
     </Modal>
+  </div>
   
   <button @click="toggleShowModals">Show modal</button>
   <button @click="toggleShowModals2">Show modal 2</button>
@@ -47,7 +42,7 @@ export default {
       header2nd: 'One Piece',
       text2nd: 'This is the best anime ever!!!',
       showModal: false,
-      showModal2: false
+      showModalTwo: false
     }
   },
   methods: {
@@ -55,7 +50,7 @@ export default {
       this.showModal = !this.showModal
     },
     toggleShowModals2() {
-      this.showModal2 = !this.showModal2
+      this.showModalTwo = !this.showModalTwo
       }
   }
 
