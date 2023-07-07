@@ -1,31 +1,27 @@
 <template>
   <h1>{{ title }}</h1>
-  <p>Welcome</p>
+  <p>Welcome...</p>
 
   <div v-if="showModal">
-  <Modal theme="sale" @close="toggleShowModals">
-
-    <template v-slot:links>
-      <a href="#">Sign up now</a>
-      <a href="#">More info</a>
-    </template>
-    
-    <h1>{{ header }}</h1>
-    <p>{{ text }}</p>
-  
-  </Modal>
-  </div>
+    <Modal theme="sale" @close="toggleModal">
+      <template v-slot:links>
+        <a href="#">sign up now</a>
+        <a href="#">more info</a>
+      </template>
+      <h1>Ninja Givaway!</h1>
+      <p>Grab your ninja swag for half price!</p>
+    </Modal>
+  </div>  
 
   <div v-if="showModalTwo">
-    <Modal @close="toggleShowModalsTwo">
+    <Modal @close="toggleModalTwo">
       <h1>Sign up to the Newsletter</h1>
       <p>For updates and promo codes!</p>
     </Modal>
   </div>
-  
-  <button @click="toggleShowModals">Show modal</button>
-  <button @click="toggleShowModals2">Show modal 2</button>
 
+  <button @click.alt="toggleModal">open modal (alt click)</button>
+  <button @click="toggleModalTwo">open modal 2</button>
 </template>
 
 <script>

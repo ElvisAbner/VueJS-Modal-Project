@@ -1,32 +1,23 @@
 <template>
   <div class="backdrop" @click.self="closeModal">
-    <div class="modal" :class="{ sale: theme === 'sale'}">
-      <slot>Dafault content</slot>
+    <div class="modal" :class="{ sale: theme === 'sale' }">
+      <slot>default content (if no slot passed in)</slot>
       <div class="actions">
         <slot name="links"></slot>
       </div>
     </div>
   </div>
-
-  <div class="backdrop" @click.self"closeModalTwo">
-    <div class="modal">
-      
-    </div>
-  </div>
 </template>
 
 <script>
-  export default {
-    props: ['header', 'text', 'theme'],
-    methods: {
-      closeModal() {
-        this.$emit('close')
-      },
-      closeModalTwo() {
-        this.$emit('close2nd')
-        }
+export default {
+  props: ['theme'],
+  methods: {
+    closeModal() {
+      this.$emit('close')
     }
   }
+}
 </script>
 
 <style>
