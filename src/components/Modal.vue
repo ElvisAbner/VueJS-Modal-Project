@@ -59,7 +59,7 @@
 
   .modal .actions a:hover {
     background-color: white;
-    color: #ed143d;
+    color: red;
   }
 
   /* sale styles */
