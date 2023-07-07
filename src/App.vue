@@ -20,7 +20,7 @@
     </Modal>
   </div>
 
-  <button @click.alt="toggleModal">open modal (alt click)</button>
+  <button @click="toggleModal">open modal (alt click)</button>
   <button @click="toggleModalTwo">open modal 2</button>
 </template>
 
@@ -32,24 +32,19 @@ export default {
   components: { Modal },
   data() {
     return {
-      title: 'My first Vue App :)',
-      header: 'Sign up for the Giveaway!',
-      text: 'Grab your ninja swag for half price!',
-      header2nd: 'One Piece',
-      text2nd: 'This is the best anime ever!!!',
+      title: 'My First Vue App!',
       showModal: false,
-      showModalTwo: false
+      showModalTwo: false,
     }
   },
   methods: {
-    toggleShowModals() {
+    toggleModal() {
       this.showModal = !this.showModal
     },
-    toggleShowModals2() {
+    toggleModalTwo() {
       this.showModalTwo = !this.showModalTwo
-      }
+    }
   }
-
 }
 </script>
 
