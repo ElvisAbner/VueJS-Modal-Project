@@ -20,8 +20,8 @@
     </Modal>
   </div>
 
-  <button @click="toggleModal">open modal (alt click)</button>
-  <button @click="toggleModalTwo">open modal 2</button>
+  <button @click="toggleModal">Open modal 1</button>
+  <button @click="toggleModalTwo">Open modal 2</button>
 </template>
 
 <script>
