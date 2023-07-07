@@ -58,8 +58,8 @@
   }
 
   .modal .actions a:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
   }
 
   /* sale styles */
