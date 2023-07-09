@@ -63,6 +63,7 @@ h1 {
   display: inline-block;
   padding-bottom: 10px;
 }
+
 button {
   background: #bbb;
   padding: 10px;
