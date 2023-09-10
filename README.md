@@ -1,4 +1,4 @@
-# reaction-timer
+# Login-Register-Modal
 
 ## Project setup
 ```
